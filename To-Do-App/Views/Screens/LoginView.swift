@@ -19,16 +19,22 @@ struct LoginView: View {
                 
                 // List (email, password, button)
                 List {
+                    if !viewModel.errorMessage.isEmpty {
+                        Text(viewModel.errorMessage)
+                            .foregroundStyle(.red)
+                    }
                     TextField("E-mail", text: $viewModel.email)
                         .autocorrectionDisabled()
                         .autocapitalization(.none)
                     SecureField("Password", text: $viewModel.password)
                 }
                 .listStyle(PlainListStyle()) // List stilini düz bir liste olarak ayarla
-                .frame(height: 150)
+                .frame(height: 200)
                 .padding(.horizontal)
                 
-                BigButton(title: "Login", action: {})
+                BigButton(title: "Login") {
+                    viewModel.login()
+                }
 
                 Spacer()
                 
