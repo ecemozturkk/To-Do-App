@@ -9,8 +9,7 @@ import SwiftUI
 
 struct LoginView: View {
     
-    @State var email: String = ""
-    @State var password: String = ""
+    @StateObject var viewModel = LoginViewModel()
     
     var body: some View {
         NavigationStack {
@@ -20,24 +19,17 @@ struct LoginView: View {
                 
                 // List (email, password, button)
                 List {
-                    TextField("E-mail", text: $email)
-                    SecureField("Password", text: $password)
+                    TextField("E-mail", text: $viewModel.email)
+                        .autocorrectionDisabled()
+                        .autocapitalization(.none)
+                    SecureField("Password", text: $viewModel.password)
                 }
                 .listStyle(PlainListStyle()) // List stilini düz bir liste olarak ayarla
                 .frame(height: 150)
                 .padding(.horizontal)
                 
-                Button(action: {}, label: {
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 5)
-                            .foregroundStyle(.primary)
-                        Text("Login")
-                            .foregroundStyle(.white)
-                    }
-                })
-                .frame(width: 300, height: 50)
-                .padding(.horizontal)
-                
+                BigButton(title: "Login", action: {})
+
                 Spacer()
                 
                 // Footer (doesn't have account?)

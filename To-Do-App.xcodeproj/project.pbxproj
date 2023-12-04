@@ -31,6 +31,7 @@
 		52BF76AB2B1E009800113B20 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BF76AA2B1E009800113B20 /* RegisterViewModel.swift */; };
 		52BF76AD2B1E00A600113B20 /* ToDoListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BF76AC2B1E00A600113B20 /* ToDoListItemViewModel.swift */; };
 		52BF76AF2B1E098600113B20 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BF76AE2B1E098600113B20 /* HeaderView.swift */; };
+		52BF76B12B1E5CB500113B20 /* BigButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BF76B02B1E5CB500113B20 /* BigButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		52BF76AA2B1E009800113B20 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		52BF76AC2B1E00A600113B20 /* ToDoListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListItemViewModel.swift; sourceTree = "<group>"; };
 		52BF76AE2B1E098600113B20 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		52BF76B02B1E5CB500113B20 /* BigButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,14 +113,8 @@
 		52BF768C2B1DFE8200113B20 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				52BF76772B1DF4DA00113B20 /* MainView.swift */,
-				52BF76902B1DFFE300113B20 /* ProfileView.swift */,
-				52BF76942B1DFFF900113B20 /* NewItemView.swift */,
-				52BF76962B1E000200113B20 /* LoginView.swift */,
-				52BF76982B1E000F00113B20 /* RegisterView.swift */,
-				52BF76922B1DFFED00113B20 /* ToDoListView.swift */,
-				52BF769A2B1E001A00113B20 /* ToDoListItemView.swift */,
-				52BF76AE2B1E098600113B20 /* HeaderView.swift */,
+				52BF76B22B1E5E8B00113B20 /* Screens */,
+				52BF76B32B1E5EA900113B20 /* Components */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -154,6 +150,29 @@
 				52BF76792B1DF4DC00113B20 /* Assets.xcassets */,
 			);
 			path = Others;
+			sourceTree = "<group>";
+		};
+		52BF76B22B1E5E8B00113B20 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				52BF76772B1DF4DA00113B20 /* MainView.swift */,
+				52BF76902B1DFFE300113B20 /* ProfileView.swift */,
+				52BF76942B1DFFF900113B20 /* NewItemView.swift */,
+				52BF76962B1E000200113B20 /* LoginView.swift */,
+				52BF76982B1E000F00113B20 /* RegisterView.swift */,
+				52BF76922B1DFFED00113B20 /* ToDoListView.swift */,
+				52BF769A2B1E001A00113B20 /* ToDoListItemView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		52BF76B32B1E5EA900113B20 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				52BF76AE2B1E098600113B20 /* HeaderView.swift */,
+				52BF76B02B1E5CB500113B20 /* BigButtonView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +257,7 @@
 				52BF76972B1E000200113B20 /* LoginView.swift in Sources */,
 				52BF76AF2B1E098600113B20 /* HeaderView.swift in Sources */,
 				52BF76A72B1E008000113B20 /* LoginViewModel.swift in Sources */,
+				52BF76B12B1E5CB500113B20 /* BigButtonView.swift in Sources */,
 				52BF76AB2B1E009800113B20 /* RegisterViewModel.swift in Sources */,
 				52BF76782B1DF4DA00113B20 /* MainView.swift in Sources */,
 				52BF76A12B1E006400113B20 /* MainViewModel.swift in Sources */,
