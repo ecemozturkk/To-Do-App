@@ -8,8 +8,48 @@
 import SwiftUI
 
 struct LoginView: View {
+    
+    @State var email: String = ""
+    @State var password: String = ""
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            VStack {
+                // Header
+                HeaderView()
+                
+                // List (email, password, button)
+                List {
+                    TextField("E-mail", text: $email)
+                    SecureField("Password", text: $password)
+                }
+                .listStyle(PlainListStyle()) // List stilini düz bir liste olarak ayarla
+                .frame(height: 150)
+                .padding(.horizontal)
+                
+                Button(action: {}, label: {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 5)
+                            .foregroundStyle(.primary)
+                        Text("Login")
+                            .foregroundStyle(.white)
+                    }
+                })
+                .frame(width: 300, height: 50)
+                .padding(.horizontal)
+                
+                Spacer()
+                
+                // Footer (doesn't have account?)
+                VStack {
+                    Text("Don't have an account?")
+                    NavigationLink(destination: RegisterView()) {
+                        Text("Sign up")
+                    }
+                }
+                .padding(.bottom, 20)
+            }
+        }
     }
 }
 
