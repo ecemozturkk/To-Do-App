@@ -32,6 +32,7 @@
 		52BF76AD2B1E00A600113B20 /* ToDoListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BF76AC2B1E00A600113B20 /* ToDoListItemViewModel.swift */; };
 		52BF76AF2B1E098600113B20 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BF76AE2B1E098600113B20 /* HeaderView.swift */; };
 		52BF76B12B1E5CB500113B20 /* BigButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BF76B02B1E5CB500113B20 /* BigButtonView.swift */; };
+		52BF76B72B20C32200113B20 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BF76B62B20C32200113B20 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		52BF76AC2B1E00A600113B20 /* ToDoListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListItemViewModel.swift; sourceTree = "<group>"; };
 		52BF76AE2B1E098600113B20 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		52BF76B02B1E5CB500113B20 /* BigButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigButtonView.swift; sourceTree = "<group>"; };
+		52BF76B62B20C32200113B20 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 				52BF76752B1DF4DA00113B20 /* To_Do_AppApp.swift */,
 				52BF768A2B1DFD3D00113B20 /* GoogleService-Info.plist */,
 				52BF76792B1DF4DC00113B20 /* Assets.xcassets */,
+				52BF76B62B20C32200113B20 /* Extensions.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				52BF76932B1DFFED00113B20 /* ToDoListView.swift in Sources */,
 				52BF769D2B1E003E00113B20 /* User.swift in Sources */,
 				52BF769B2B1E001A00113B20 /* ToDoListItemView.swift in Sources */,
+				52BF76B72B20C32200113B20 /* Extensions.swift in Sources */,
 				52BF76762B1DF4DA00113B20 /* To_Do_AppApp.swift in Sources */,
 				52BF769F2B1E004E00113B20 /* ToDoListItem.swift in Sources */,
 				52BF76952B1DFFF900113B20 /* NewItemView.swift in Sources */,

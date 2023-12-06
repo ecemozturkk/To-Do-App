@@ -9,9 +9,7 @@ import SwiftUI
 
 struct RegisterView: View {
     
-    @State var name = ""
-    @State var email = ""
-    @State var password = ""
+    @StateObject var viewModel = RegisterViewModel()
     
     var body: some View {
         NavigationStack {
@@ -21,18 +19,24 @@ struct RegisterView: View {
                 
                 // Register form
                 List {
-                    TextField("Full name", text: $name)
+                    if !viewModel.errorMessage.isEmpty {
+                        Text(viewModel.errorMessage)
+                            .foregroundStyle(.red)
+                    }
+                    TextField("Full name", text: $viewModel.name)
                         .autocorrectionDisabled()
-                    TextField("E-mail", text: $email)
+                    TextField("E-mail", text: $viewModel.email)
                         .autocorrectionDisabled()
                         .autocapitalization(.none)
-                    SecureField("Password", text: $password)
+                    SecureField("Password", text: $viewModel.password)
                 }
-                .listStyle(PlainListStyle()) // List stilini düz bir liste olarak ayarla
-                .frame(height: 150)
+                .listStyle(PlainListStyle())
+                .frame(height: 200)
                 .padding(.horizontal)
                 
-                BigButton(title: "Register", action: {})
+                BigButton(title: "Register") {
+                    viewModel.register()
+                }
                 
                 Spacer()
                 
