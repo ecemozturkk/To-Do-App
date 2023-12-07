@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import FirebaseAuth
+import FirebaseFirestore
 
 class NewItemViewModel: ObservableObject {
     @Published var title = ""
@@ -16,7 +18,21 @@ class NewItemViewModel: ObservableObject {
     }
     
     func save() {
+        guard canSave else {
+            return
+        }
+        guard let uID = Auth.auth().currentUser?.uid else {
+            return
+        }
         
+        let newItemID = UUID().uuidString
+        let newItem = ToDoListItem(id: newItemID,
+                                   title: title,
+                                   dueDate: dueDate.timeIntervalSince1970,
+                                   createdDate: Date().timeIntervalSince1970,
+                                   isDone: false)
+        let db = Firestore.firestore()
+        db.collection("users").document(uID).collection("todos").document(newItem.id).setData(newItem.asDictionary())
     }
     
     var canSave: Bool {
@@ -28,5 +44,4 @@ class NewItemViewModel: ObservableObject {
         }
         return true
     }
-    
 }
