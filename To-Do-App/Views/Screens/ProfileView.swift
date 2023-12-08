@@ -11,16 +11,49 @@ struct ProfileView: View {
     
     @StateObject var viewModel = ProfileViewModel()
     
-    init() {
-        
-    }
+    init() {}
     
     var body: some View {
         NavigationView {
             VStack {
-                
+                if let user = viewModel.user {
+                    profile(user: user)
+                } else {
+                    VStack {
+                        Text("Loading...")
+                        ProgressView()
+                    }
+                    .padding(.bottom, 25)
+                }
+
+                BigButton(title: "Logout") {viewModel.logout()}
             }
             .navigationTitle("Profile")
+        }
+        .onAppear() {
+            viewModel.fetchUser()
+        }
+    }
+    @ViewBuilder
+    func profile(user:User) -> some View {
+        Image(systemName: "person.circle")
+            .font(.system(size: 100))
+            .foregroundStyle(Color.blue)
+            .padding()
+        
+        VStack {
+            HStack {
+                Text("Name: ")
+                Text(user.name)
+            }
+            HStack {
+                Text("Email: ")
+                Text(user.email)
+            }
+            HStack {
+                Text("Joined: ")
+                Text("\(Date(timeIntervalSince1970: user.joined).formatted(date: .abbreviated, time: .shortened))")
+            }
         }
     }
 }
